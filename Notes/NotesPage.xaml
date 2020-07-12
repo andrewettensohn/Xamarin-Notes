@@ -5,10 +5,10 @@
              Title="Notes">
     <ContentPage.Resources>
         <!-- Implicit styles -->
-        <Style TargetType="{x:Type ListView}">
+        <!--<Style TargetType="{x:Type ListView}">
             <Setter Property="BackgroundColor"
                     Value="{StaticResource AppBackgroundColor}" />
-        </Style>
+        </Style>-->
         <Style TargetType="{x:Type Label}">
             <Setter Property="TextColor"
                     Value="{StaticResource PrimaryTextColor}" />
@@ -22,7 +22,7 @@
 
     <ListView x:Name="listView"
               Margin="{StaticResource PageMargin}"
-              ItemSelected="OnListViewItemTapped"
+              ItemSelected="OnListViewItemSelected"
               HasUnevenRows="True"
               SeparatorVisibility="Default"
               SeparatorColor="WhiteSmoke">
@@ -43,5 +43,27 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+
+    <!--<CollectionView x:Name="collectionView"
+                    >
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Label Text="{Binding Text}"
+                       TextColor="{StaticResource PrimaryTextColor}"/>
+                --><!--<ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="30" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="{Binding Text}" FontSize="Title" />
+                        <Label Grid.Row="1" Text="{Binding DisplayCreateDate}" />
+                        <Label Grid.Row="2" Text="{Binding DisplayLastUpdatedDate}" />
+                    </Grid>
+                </ViewCell>--><!--
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>-->
 
 </ContentPage>

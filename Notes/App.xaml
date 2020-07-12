@@ -9,8 +9,8 @@
         <!-- Colors -->
         <Color x:Key="AppBackgroundColor">Black</Color>
         <Color x:Key="PageBackgroundColor">Black</Color>
-        <Color x:Key="NavigationPageColor">#2632382</Color>
-        <Color x:Key="NavigationBarColor">#263238</Color>
+        <Color x:Key="NavigationPageColor">Black</Color>
+        <Color x:Key="NavigationBarColor">Black</Color>
         <Color x:Key="NavigationBarTextColor">White</Color>
         <Color x:Key="PrimaryColor">#263238</Color>
         <Color x:Key="SecondaryColor">White</Color>
