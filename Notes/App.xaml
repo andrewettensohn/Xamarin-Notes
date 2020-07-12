@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.App">
+    <Application.Resources>
+
+        <Thickness x:Key="PageMargin">20</Thickness>
+
+        <!-- Colors -->
+        <Color x:Key="AppBackgroundColor">Black</Color>
+        <Color x:Key="PageBackgroundColor">Black</Color>
+        <Color x:Key="NavigationPageColor">#2632382</Color>
+        <Color x:Key="NavigationBarColor">#263238</Color>
+        <Color x:Key="NavigationBarTextColor">White</Color>
+        <Color x:Key="PrimaryColor">#263238</Color>
+        <Color x:Key="SecondaryColor">White</Color>
+        <Color x:Key="SaveButtonColor">#00e676</Color>
+        <Color x:Key="DeleteButtonColor">#d50000</Color>
+        <Color x:Key="PrimaryTextColor">White</Color>
+        <Color x:Key="TertiaryTextColor">WhiteSmoke</Color>
+        <Color x:Key="SecondaryTextColor">White</Color>
+
+        <!-- Implicit styles -->
+        <Style TargetType="{x:Type NavigationPage}">
+            <Setter Property="BarBackgroundColor"
+                    Value="{StaticResource NavigationBarColor}" />
+            <Setter Property="BarTextColor"
+                    Value="{StaticResource NavigationBarTextColor}" />
+            <Setter Property="NavigationPage.BackgroundColor" 
+                    Value="{StaticResource AppBackgroundColor}"></Setter>
+        </Style>
+
+        <Style TargetType="{x:Type ContentPage}"
+               ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+
+    </Application.Resources>
+</Application>
