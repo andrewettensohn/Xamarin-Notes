@@ -23,11 +23,21 @@
     </ContentPage.Resources>
 
     <StackLayout Margin="{StaticResource PageMargin}">
+        <Entry Text="{Binding Title}"
+               Placeholder="Enter your title"
+               PlaceholderColor="{StaticResource SecondaryTextColor}"
+               BackgroundColor="{StaticResource AppBackgroundColor}"
+               TextColor="{StaticResource PrimaryTextColor}"
+               FontSize="Title"
+               MaxLength="20"
+               Keyboard="Plain"
+               />
         <Editor Placeholder="Enter your note"
+                PlaceholderColor="{StaticResource SecondaryTextColor}"
                 Text="{Binding Text}"
                 HeightRequest="100"
-                BackgroundColor="Black"
-                TextColor="White"/>
+                BackgroundColor="{StaticResource AppBackgroundColor}"
+                TextColor="{StaticResource PrimaryTextColor}"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />

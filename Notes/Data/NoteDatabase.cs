@@ -49,6 +49,11 @@ namespace Notes.Data
 
         public Task<int> SaveNoteAsync(Note note)
         {
+            if(string.IsNullOrWhiteSpace(note.Title))
+            {
+                note.Title = "No Title";
+            }
+
             if (note.ID != 0)
             {
                 return _database.UpdateAsync(note);

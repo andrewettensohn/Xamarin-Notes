@@ -28,11 +28,6 @@ namespace Notes
             });
         }
 
-        async void OnSwiped(object sender, EventArgs e)
-        {
-            bool deleteConfirmed = await DisplayAlert("Confirm", "Are you sure you want to delete this note?", "Delete", "Cancel");
-        }
-
         async void OnListViewItemSelected(object sender, SelectionChangedEventArgs e)
         {
             if (e.CurrentSelection.FirstOrDefault() != null)

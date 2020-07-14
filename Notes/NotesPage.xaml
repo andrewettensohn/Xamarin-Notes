@@ -5,10 +5,6 @@
              Title="Notes">
     <ContentPage.Resources>
         <!-- Implicit styles -->
-        <!--<Style TargetType="{x:Type ListView}">
-            <Setter Property="BackgroundColor"
-                    Value="{StaticResource AppBackgroundColor}" />
-        </Style>-->
         <Style TargetType="{x:Type Label}">
             <Setter Property="TextColor"
                     Value="{StaticResource PrimaryTextColor}" />
@@ -29,18 +25,14 @@
             <DataTemplate>
                 <StackLayout>
                     <StackLayout.GestureRecognizers>
-                        
                     </StackLayout.GestureRecognizers>
                     <Grid>
-                        <!--<Grid.GestureRecognizers>
-                            <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
-                        </Grid.GestureRecognizers>-->
                         <Grid.RowDefinitions>
                             <RowDefinition Height="30" />
                             <RowDefinition Height="Auto" />
                             <RowDefinition Height="30" />
                         </Grid.RowDefinitions>
-                        <Label Grid.Row="0" Text="{Binding Text}" FontSize="Title" />
+                        <Label Grid.Row="0" Text="{Binding Title}" FontSize="Title" />
                         <Label Grid.Row="1" Text="{Binding DisplayCreateDate}" />
                         <Label Grid.Row="2" Text="{Binding DisplayLastUpdatedDate}" />
                     </Grid>
@@ -48,50 +40,7 @@
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
-
-    <!--<ListView x:Name="listView"
-              Margin="{StaticResource PageMargin}"
-              ItemSelected="OnListViewItemSelected"
-              HasUnevenRows="True"
-              SeparatorVisibility="Default"
-              SeparatorColor="WhiteSmoke">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="30" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="30" />
-                        </Grid.RowDefinitions>
-                        <Label Grid.Row="0" Text="{Binding Text}" FontSize="Title" />
-                        <Label Grid.Row="1" Text="{Binding DisplayCreateDate}" />
-                        <Label Grid.Row="2" Text="{Binding DisplayLastUpdatedDate}" />
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>-->
-
-    <!--<SwipeView>
-        <SwipeView.LeftItems>
-            <SwipeItems>
-                <SwipeItem Text="Delete"
-                       BackgroundColor="Red"/>
-            </SwipeItems>
-        </SwipeView.LeftItems>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="30" />
-            </Grid.RowDefinitions>
-            <Label Grid.Row="0" Text="{Binding Text}" FontSize="Title" />
-            <Label Grid.Row="1" Text="{Binding DisplayCreateDate}" />
-            <Label Grid.Row="2" Text="{Binding DisplayLastUpdatedDate}" />
-        </Grid>
-    </SwipeView>-->
-
+    
 </ContentPage>
 
 

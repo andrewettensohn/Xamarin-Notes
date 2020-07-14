@@ -7,12 +7,13 @@ namespace Notes.Models
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
+        public string Title { get; set; }
         public string Text { get; set; }
         public DateTime CreateDate { get; set; }
+        [Ignore]
         public string DisplayCreateDate { get; set; }
         public DateTime? LastUpdatedDate { get; set; }
-        public string DisplayLastUpdatedDate {get; set;}
         [Ignore]
-        public string Detail { get; set; }
+        public string DisplayLastUpdatedDate {get; set;}
     }
 }

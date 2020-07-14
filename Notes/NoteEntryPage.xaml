@@ -21,6 +21,12 @@
     </ContentPage.Resources>
 
     <StackLayout Margin="{StaticResource PageMargin}">
+        <Entry Placeholder="Enter your title"
+               PlaceholderColor="{StaticResource SecondaryColor}"
+               Text="{Binding Title}"
+               TextColor="{StaticResource PrimaryTextColor}"
+               MaxLength="20"
+               Keyboard="Plain"/>
         <Editor Placeholder="Enter your note"
                 PlaceholderColor="{StaticResource SecondaryColor}"
                 Text="{Binding Text}"

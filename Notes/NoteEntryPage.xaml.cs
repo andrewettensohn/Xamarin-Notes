@@ -2,6 +2,7 @@
 using System.IO;
 using Xamarin.Forms;
 using Notes.Models;
+using System.Threading.Tasks;
 
 namespace Notes
 {
@@ -19,12 +20,5 @@ namespace Notes
             await App.Database.SaveNoteAsync(note);
             await Navigation.PopAsync();
         }
-
-        //async void OnDeleteButtonClicked(object sender, EventArgs e)
-        //{
-        //    var note = (Note)BindingContext;
-        //    await App.Database.DeleteNoteAsync(note);
-        //    await Navigation.PopAsync();
-        //}
     }
 }
