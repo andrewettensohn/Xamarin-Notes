@@ -22,8 +22,11 @@
 
     <StackLayout Margin="{StaticResource PageMargin}">
         <Editor Placeholder="Enter your note"
+                PlaceholderColor="{StaticResource SecondaryColor}"
                 Text="{Binding Text}"
-                HeightRequest="100" />
+                HeightRequest="100"
+                BackgroundColor="{StaticResource AppBackgroundColor}"
+                TextColor="{StaticResource PrimaryTextColor}"/>
         <Button Text="Save"
                     Clicked="OnSaveButtonClicked"
                     HorizontalOptions="Center"/>

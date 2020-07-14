@@ -17,7 +17,7 @@ namespace Notes
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            listView.ItemsSource = await App.Database.GetNotesAsync();
+            collectionView.ItemsSource = await App.Database.GetNotesAsync();
         }
 
         async void OnNoteAddedClicked(object sender, EventArgs e)
@@ -28,13 +28,18 @@ namespace Notes
             });
         }
 
-        async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void OnSwiped(object sender, EventArgs e)
         {
-            if (e.SelectedItem != null)
+            bool deleteConfirmed = await DisplayAlert("Confirm", "Are you sure you want to delete this note?", "Delete", "Cancel");
+        }
+
+        async void OnListViewItemSelected(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.CurrentSelection.FirstOrDefault() != null)
             {
                 await Navigation.PushAsync(new NoteEditPage
                 {
-                    BindingContext = e.SelectedItem as Note
+                    BindingContext = e.CurrentSelection.FirstOrDefault() as Note
                 });
             }
         }

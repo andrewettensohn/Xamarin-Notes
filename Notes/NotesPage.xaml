@@ -20,7 +20,36 @@
                      Clicked="OnNoteAddedClicked" />
     </ContentPage.ToolbarItems>
 
-    <ListView x:Name="listView"
+    <CollectionView x:Name="collectionView"
+                    Margin="{StaticResource PageMargin}"
+                    SelectionMode="Single"
+                    SelectionChanged="OnListViewItemSelected"
+                    EmptyView="No Notes Found">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout>
+                    <StackLayout.GestureRecognizers>
+                        
+                    </StackLayout.GestureRecognizers>
+                    <Grid>
+                        <!--<Grid.GestureRecognizers>
+                            <SwipeGestureRecognizer Direction="Right" Swiped="OnSwiped"/>
+                        </Grid.GestureRecognizers>-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="30" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="{Binding Text}" FontSize="Title" />
+                        <Label Grid.Row="1" Text="{Binding DisplayCreateDate}" />
+                        <Label Grid.Row="2" Text="{Binding DisplayLastUpdatedDate}" />
+                    </Grid>
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+    <!--<ListView x:Name="listView"
               Margin="{StaticResource PageMargin}"
               ItemSelected="OnListViewItemSelected"
               HasUnevenRows="True"
@@ -42,28 +71,28 @@
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
-    </ListView>
+    </ListView>-->
 
-    <!--<CollectionView x:Name="collectionView"
-                    >
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                <Label Text="{Binding Text}"
-                       TextColor="{StaticResource PrimaryTextColor}"/>
-                --><!--<ViewCell>
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="30" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="30" />
-                        </Grid.RowDefinitions>
-                        <Label Grid.Row="0" Text="{Binding Text}" FontSize="Title" />
-                        <Label Grid.Row="1" Text="{Binding DisplayCreateDate}" />
-                        <Label Grid.Row="2" Text="{Binding DisplayLastUpdatedDate}" />
-                    </Grid>
-                </ViewCell>--><!--
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>-->
+    <!--<SwipeView>
+        <SwipeView.LeftItems>
+            <SwipeItems>
+                <SwipeItem Text="Delete"
+                       BackgroundColor="Red"/>
+            </SwipeItems>
+        </SwipeView.LeftItems>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Text="{Binding Text}" FontSize="Title" />
+            <Label Grid.Row="1" Text="{Binding DisplayCreateDate}" />
+            <Label Grid.Row="2" Text="{Binding DisplayLastUpdatedDate}" />
+        </Grid>
+    </SwipeView>-->
 
 </ContentPage>
+
+
+

@@ -25,7 +25,9 @@
     <StackLayout Margin="{StaticResource PageMargin}">
         <Editor Placeholder="Enter your note"
                 Text="{Binding Text}"
-                HeightRequest="100" />
+                HeightRequest="100"
+                BackgroundColor="Black"
+                TextColor="White"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />

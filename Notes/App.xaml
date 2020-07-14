@@ -7,13 +7,13 @@
         <Thickness x:Key="PageMargin">20</Thickness>
 
         <!-- Colors -->
-        <Color x:Key="AppBackgroundColor">Black</Color>
-        <Color x:Key="PageBackgroundColor">Black</Color>
-        <Color x:Key="NavigationPageColor">Black</Color>
-        <Color x:Key="NavigationBarColor">Black</Color>
+        <Color x:Key="AppBackgroundColor">#000a12</Color>
+        <Color x:Key="PageBackgroundColor">#000a12</Color>
+        <Color x:Key="NavigationPageColor">#000a12</Color>
+        <Color x:Key="NavigationBarColor">#000a12</Color>
         <Color x:Key="NavigationBarTextColor">White</Color>
         <Color x:Key="PrimaryColor">#263238</Color>
-        <Color x:Key="SecondaryColor">White</Color>
+        <Color x:Key="SecondaryColor">#4f5b62</Color>
         <Color x:Key="SaveButtonColor">#00e676</Color>
         <Color x:Key="DeleteButtonColor">#d50000</Color>
         <Color x:Key="PrimaryTextColor">White</Color>
